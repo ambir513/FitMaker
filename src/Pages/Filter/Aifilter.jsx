@@ -60,7 +60,7 @@ function Aifilter() {
     setIsChange((prev) => !prev);
     try {
       const response = await axios.post(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAX3p7hWr8_xKCYopBN7WpsXjqrKN1Zs7s",
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE}`,
         requestData,
         {
           headers: {
