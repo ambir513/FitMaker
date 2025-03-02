@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { FaRegEdit } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 
 
 function Account() {
