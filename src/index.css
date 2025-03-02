@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-orange: #ff5c02;
+  --color-stock: #e9eaeb;
+  --color-textColor: #9ea2ad;
+  --color-blackColor: #212121;
+  --color-backgoundColor: #d2d2d2;
+  --color-WallpaperColorText: #bdbdbd;
+  --color-WallpaperColorText2: #e0e0e0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  font-family: "Manrope", serif;
+}
