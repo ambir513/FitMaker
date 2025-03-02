@@ -27,16 +27,17 @@ function Login() {
         } else {
             try {
                 const response = await axios
-                    .post("http://localhost:5000/login", { email, password })
-                const token = response.data.token
+                    .post("https://fitmakerbackend.vercel.app/login", { email, password })
+                const token = response.data.token   
                 setEmail("")
                 setPassword("")
 
                 if (response.data.status === "SUCCESS") {
                     toast.success(response.data.message)
                     setTimeout(() => {
-                        navigate("/account")
-                    }, 1500)
+                        navigate(0)
+                    }, 1200)
+                    navigate("/")
                 } else {
                     toast.error(response.data.message)
                 }

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import free from "../assets/fit.png";
+import free from "../../../public/assets/FitMaker.png"
 
 function Footer() {
   return (
     <div>
-      <footer className="z-10 bg-white text-gray-800">
+      <footer className="z-10 bg-white mt-10 text-gray-800">
         <div className="w-full h-fit md:p-20 p-10 sm:p-15 lg:p-20 flex flex-col justify-center items-center">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 sm:gap-12 md:gap-16 w-full max-w-7xl">
             {/* Brand Section */}

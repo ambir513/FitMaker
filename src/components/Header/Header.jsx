@@ -14,11 +14,11 @@ export default function Navbar() {
   useEffect(() => {
     if (isLogin) {
       axios
-        .post("http://localhost:5000/userverify", { token })
+        .post("https://fitmakerbackend.vercel.app/userverify", { token })
         .then((res) => {
           const userId = res.data.userId;
           axios
-            .post("http://localhost:5000/user", { userId })
+            .post("https://fitmakerbackend.vercel.app/user", { userId })
             .then((res) => {
               setUser(res.data);
               console.log(res.data);

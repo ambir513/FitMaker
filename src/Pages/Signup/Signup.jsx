@@ -29,7 +29,7 @@ function Signup() {
             })
         } else {
             axios
-                .post("http://localhost:5000/register", { username, email, password })
+                .post("https://fitmakerbackend.vercel.app/register", { username, email, password })
                 .then((res) => {
                     setEmail("")
                     setUsername("")

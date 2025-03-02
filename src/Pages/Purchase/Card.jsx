@@ -10,7 +10,7 @@ const Card = () => {
     {
       id: 1,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "500.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -51,7 +51,7 @@ const Card = () => {
     {
       id: 2,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "600.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -92,7 +92,7 @@ const Card = () => {
     {
       id: 3,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "800.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -133,7 +133,7 @@ const Card = () => {
     {
       id: 4,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "800.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -174,7 +174,7 @@ const Card = () => {
     {
       id: 5,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "500.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -215,7 +215,7 @@ const Card = () => {
     {
       id: 6,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "250.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -256,7 +256,7 @@ const Card = () => {
     {
       id: 7,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "600.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -297,7 +297,7 @@ const Card = () => {
     {
       id: 8,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "600.00",
       rating: 4,
       reviews: 150,
       images: [
@@ -391,21 +391,7 @@ const Card = () => {
             </div>
 
             <div className="mt-8">
-              <div>
-                <h3 className="text-lg font-bold text-gray-800">Membership Plans</h3>
-                <div className="flex flex-wrap gap-4 mt-4">
-                  {['1 Month', '3 Months', '6 Months', '12 Months'].map((plan) => (
-                    <button
-                      key={plan}
-                      type="button"
-                      className={`w-20 h-9 border-none outline-none ${plan === '1 Month' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'} text-sm flex items-center justify-center shrink-0`}
-                    >
-                      {plan}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
+            
               <div className="mt-6">
                 <div className="flex gap-4">
                   <div className="flex border border-gray-300 w-48">
@@ -429,7 +415,7 @@ const Card = () => {
                     to={`/Join/${profileId}`}
                     className="px-4 py-3 w-full border border-gray-800 bg-gray-800 hover:bg-transparent hover:text-gray-800 text-white text-sm font-semibold transition-all duration-300 no-underline text-center"
                   >
-                    Join Now
+                    add to cart
                   </Link>
                 </div>
                 <button
@@ -441,40 +427,9 @@ const Card = () => {
               </div>
             </div>
 
-            <div className="mt-8">
-              <h3 className="text-lg font-bold text-gray-800">Select Gym Location</h3>
-              <p className="text-gray-500 text-sm mt-1">Enter your area pincode to check gym availability.</p>
-              <div className="flex items-center gap-2 mt-4 max-w-sm">
-                <input
-                  type="number"
-                  placeholder="Enter pincode"
-                  className="bg-gray-100 px-4 py-2.5 text-sm w-full border border-gray-300 outline-0"
-                />
-                <button
-                  type="button"
-                  className="border border-gray-800 outline-0 bg-gray-800 hover:bg-gray-900 text-white px-4 py-2.5 text-sm"
-                >
-                  Check
-                </button>
-              </div>
+            
 
-              <div className="flex items-center gap-2 mt-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 fill-purple-600 inline"
-                  viewBox="0 0 32 32"
-                >
-                  <g data-name="Layer 24">
-                    <path d="m31.385 15.434-3.33-5.55a1.11 1.11 0 0 0-.955-.544h-6.66V8.23a1.11 1.11 0 0 0-1.11-1.11h-2.22a1.11 1.11 0 0 0 0 2.22h1.11v13.32h-7.837a3.863 3.863 0 0 0-5.416 0H2.68v-5.55a1.11 1.11 0 0 0-2.22 0v6.66a1.11 1.11 0 0 0 1.11 1.11h2.276a4.44 4.44 0 0 0 0 .555 3.885 3.885 0 0 0 7.77 0 4.44 4.44 0 0 0-.056-.555h8.991a4.44 4.44 0 0 0-.056.555 3.885 3.885 0 0 0 7.77 0 4.44 4.44 0 0 0-.055-.555h2.22a1.11 1.11 0 0 0 1.11-1.11V16a1.11 1.11 0 0 0-.155-.566zm-2.92-.544H24.88v-3.33h1.587zM7.675 27.1a1.665 1.665 0 1 1 1.665-1.665A1.665 1.665 0 0 1 7.675 27.1zm16.65 0a1.665 1.665 0 1 1 1.665-1.665 1.665 1.665 0 0 1-1.665 1.665zm2.708-4.44a3.863 3.863 0 0 0-5.416 0H20.44v-11.1h2.22V16a1.11 1.11 0 0 0 1.11 1.11h5.55v1.11h-1.11a1.11 1.11 0 0 0 0 2.22h1.11v2.22z" />
-                    <path d="M7.12 16A6.66 6.66 0 1 0 .46 9.34 6.66 6.66 0 0 0 7.12 16zm0-11.1a4.44 4.44 0 1 1-4.44 4.44A4.44 4.44 0 0 1 7.12 4.9z" />
-                    <path d="M7.12 10.45h2.22a1.11 1.11 0 0 0 0-2.22H8.23V7.12a1.11 1.11 0 0 0-2.22 0v2.22a1.11 1.11 0 0 0 1.11 1.11z" />
-                  </g>
-                </svg>
-                <p className="text-sm">
-                  Add <b>3 more months</b> for exclusive member benefits
-                </p>
-              </div>
-            </div>
+              
 
             <div className="mt-8 bg-gray-200 px-4 py-4">
               <p className="text-sm text-center font-semibold">Secure Membership Registration</p>

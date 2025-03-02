@@ -13,7 +13,7 @@ function Verification() {
     useEffect(() => {
         if (token) {
             axios
-                .get(`http://localhost:5000/verify?token=${token}`)
+                .get(`https://fitmakerbackend.vercel.app/verify?token=${token}`)
                 .then((res) => {
                     setMessage(res.data.message)
                     localStorage.setItem("tokenVerify", token);

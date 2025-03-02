@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const Cart = () => {
   const { profileId } = useParams();
+  const [selectedImage, setSelectedImage] = useState(null);  // Added state for image selection
 
   const products = [
     {
       id: 1,
       name: "PowerFit Gym Membership",
-      price: "$17.00",
+      price: "100.00",
       description: "1-month unlimited gym access with gear.",
       images: [
         "https://m.media-amazon.com/images/I/71uYrdXxVVL._SX679_.jpg",
@@ -22,7 +23,7 @@ const Cart = () => {
     {
       id: 2,
       name: "StrengthCore Membership",
-      price: "$25.00",
+      price: "200.00",
       description: "Strength training with premium tools.",
       images: [
         "https://m.media-amazon.com/images/I/51gAxAoCY2L._SX679_.jpg",
@@ -36,7 +37,7 @@ const Cart = () => {
     {
       id: 3,
       name: "FlexFit Yoga Plan",
-      price: "$20.00",
+      price: "300.00",
       description: "Yoga classes with mat included.",
       images: [
         "https://m.media-amazon.com/images/I/81aMFWnZvvL._SX679_.jpg",
@@ -50,7 +51,7 @@ const Cart = () => {
     {
       id: 4,
       name: "CardioBlast Membership",
-      price: "$22.00",
+      price: "500.00",
       description: "Cardio-focused plan with monitor.",
       images: [
         "https://m.media-amazon.com/images/I/61sQJz9JJRL._SL1000_.jpg",
@@ -64,7 +65,7 @@ const Cart = () => {
     {
       id: 5,
       name: "EliteFit Premium Plan",
-      price: "$35.00",
+      price: "600.00",
       description: "Elite access with personal training.",
       images: [
         "https://m.media-amazon.com/images/I/61jG8B2I0QL._SX679_.jpg",
@@ -78,7 +79,7 @@ const Cart = () => {
     {
       id: 6,
       name: "CorePulse Gym Pass",
-      price: "$18.00",
+      price: "800.00",
       description: "Core training with essentials.",
       images: [
         "https://m.media-amazon.com/images/I/61Le0NNy8FL._SX679_PIbundle-2,TopRight,0,0_AA679SH20_.jpg",
@@ -92,20 +93,35 @@ const Cart = () => {
     {
       id: 7,
       name: "VitalityFit Membership",
-      price: "$30.00",
+      price: "600.00",
       description: "Full access with nutrition plan.",
       images: [
-        "https://readymadeui.com/images/product1.webp",
-        "https://readymadeui.com/images/product2.webp",
-        "https://readymadeui.com/images/product3.webp",
-        "https://readymadeui.com/images/product6.webp",
-        "https://readymadeui.com/images/product5.webp",
-        "https://readymadeui.com/images/product4.webp",
+        "https://m.media-amazon.com/images/I/81PIbTqr82L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61g10uGmAlL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61aRAeR8EfL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/71Cn9cJDE1L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/71Zrqs1Va1L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61K792OwJDL._SL1200_.jpg",
+      ],
+    },
+    {
+      id: 8,
+      name: "VitalityFit Membership",
+      price: "500.00",
+      description: "Full access with nutrition plan.",
+      images: [
+        "https://m.media-amazon.com/images/I/71RvSZh1hHL._SY879_.jpg",
+        "https://m.media-amazon.com/images/I/51Q7-I09e8L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/6183-nqbIhL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61qZTZwCr6L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/71AvVqjKeYL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/712SKXIwxuL._SX679_.jpg",
       ],
     },
   ];
 
   const product = products.find((p) => p.id === parseInt(profileId)) || products[0];
+  const mainImage = selectedImage || product.images[0];  // Added to handle main image selection
 
   return (
     <div className="font-[sans-serif] p-4 bg-gray-100 mt-20">
@@ -115,7 +131,7 @@ const Cart = () => {
             <div className="flex flex-col gap-4">
               <div className="bg-white shadow p-2">
                 <img
-                  src={product.images[0]}
+                  src={mainImage}  // Changed to use dynamic mainImage
                   alt="Product"
                   className="w-full aspect-[11/8] object-cover object-top"
                 />
@@ -128,6 +144,7 @@ const Cart = () => {
                       src={image}
                       alt={`Product${index + 1}`}
                       className={`w-16 h-16 aspect-square object-cover object-top cursor-pointer shadow-md border-b-2 ${index === 0 ? 'border-black' : 'border-transparent'}`}
+                      onClick={() => setSelectedImage(image)}  // Added click handler
                     />
                   ))}
                 </div>
@@ -214,7 +231,7 @@ const Cart = () => {
                   Back to Shop
                 </Link>
                 <Link
-                  to={`/Purchase/${profileId}`} // New link for Buy it now
+                  to={`/Purchase/${profileId}`}
                   className="px-4 py-3 w-[45%] border border-purple-600 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold no-underline text-center"
                 >
                   Buy it now

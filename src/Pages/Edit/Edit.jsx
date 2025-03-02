@@ -11,11 +11,11 @@ function Edit() {
         if (isLogin) {
 
             axios
-                .post("http://localhost:5000/verify", { token })
+                .post("https://fitmakerbackend.vercel.app/verify", { token })
                 .then((res) => {
                     const userId = res.data.userId
                     axios
-                        .post("http://localhost:5000/user", { userId })
+                        .post("https://fitmakerbackend.vercel.app/user", { userId })
                         .then((res) => {
                             setUser([res.data])
                             console.log(res.data);

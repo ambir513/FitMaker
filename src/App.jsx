@@ -21,7 +21,6 @@ import Edit from "./Pages/Edit/Edit";
 import Search from "./Pages/Search/Search";
 import Verification from "./Pages/Verification/Verification";
 import Filter from "./Pages/Filter/Filter";
-import Research from "./Pages/Research/Research";
 import Purchase from "./Pages/Purchase/Purchase";
 import Card from "./Pages/Purchase/Card";
 import Cart from "./Pages/Purchase/Cart";
@@ -68,11 +67,11 @@ function App() {
         />
         <Route
           path="/ai-diet-filter"
-          element={isUserSignIn ? <Aifilter /> : <ErrorHandling />}
+          element={isUserSignIn ? <Aifilter /> : <Login />}
         />
+        <Route path="/join/:profileId" element={<Join />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/research" element={<Research />} />
         <Route path="/verify" element={<Verification />} />
         <Route path="*" element={<ErrorHandling />} />
       </Routes>
