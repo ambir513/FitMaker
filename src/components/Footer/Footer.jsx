@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import free from "../../../public/assets/FitMaker.png"
+import free from "/assets/FitMaker.png"
 
 function Footer() {
   return (
