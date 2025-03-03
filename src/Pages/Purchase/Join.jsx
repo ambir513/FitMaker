@@ -227,7 +227,7 @@ const Join = () => {
               
               <Link to={`upi://pay?pa=amarbiradar147@oksbi&pn=Amar%20Biradar&am=${product.total}` }
                 type="submit"
-                className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
+                className="min-w-[150px]         px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
               >
                 Pay {product.total}
               </Link>
