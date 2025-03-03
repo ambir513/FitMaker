@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 const slides = [{ video: video1 }, { video: video2 }, { video: video3 }];
 
 const services = [
-  {
+  {       
     title: "Strength Training",
     img: "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=600",
     desc: "Increase your power with specialized strength-building exercises.",
   },
-  {
+  { 
     title: "Cardio Workouts",
     img: "https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149_640.jpg",
     desc: "Improve your stamina and heart health with intense cardio sessions.",
@@ -239,28 +239,28 @@ export default function Home() {
               Our expert trainers, state-of-the-art equipment, and
               science-backed programs ensure you get the best results possible.
             </p>
-            <div class="flex flex-col gap-4 p-4">
-              <div class="flex items-center gap-4">
-                <span class="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
+            <div className="flex flex-col gap-4 p-4">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
                   ✓
                 </span>
-                <p class="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
+                <p className="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
                   Advanced Equipment
                 </p>
               </div>
-              <div class="flex items-center gap-4">
-                <span class="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
                   ✓
                 </span>
-                <p class="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
+                <p className="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
                   Nutrition Guidance
                 </p>
               </div>
-              <div class="flex items-center gap-4">
-                <span class="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
                   ✓
                 </span>
-                <p class="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
+                <p className="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
                   Community Support
                 </p>
               </div>
@@ -564,21 +564,21 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="relative overflow-hidden bg-neutral-900 py-4">
-        <div class="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-neutral-900 to-transparent z-10"></div>
+      <div className="relative overflow-hidden bg-neutral-900 py-4">
+        <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-neutral-900 to-transparent z-10"></div>
 
-        <div class="marquee flex space-x-16">
-          <span class="marquee-text">
+        <div className="marquee flex space-x-16">
+          <span className="marquee-text">
             Personal Coach • Online Store • Kids Sports • Martial Arts • Gym
             Website • Personal Training • Sports Equipment
           </span>
-          <span class="marquee-text">
+          <span className="marquee-text">
             Personal Coach • Online Store • Kids Sports • Martial Arts • Gym
             Website • Personal Training • Sports Equipment
           </span>
         </div>
 
-        <div class="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-neutral-900 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-neutral-900 to-transparent z-10"></div>
       </div>
     </>
   );
