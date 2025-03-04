@@ -32,7 +32,6 @@ Feel free to contribute by submitting issues or pull requests. Any improvements 
 
 ### Contributors
 - [Jayesh Singh](https://github.com/JayeshSingh5452)
-- [Soyab Shaikh](https://github.com/soyxbshxikh)
 - [Amar Biradar](https://github.com/ambir513)
 - <b>Feel free to contribute by submitting issues or pull requests. Any improvements are welcome!</b>
 
