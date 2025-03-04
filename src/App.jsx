@@ -63,7 +63,7 @@ function App() {
         />
         <Route
           path="/diet-filter"
-          element={isUserSignIn ? <Filter /> : <ErrorHandling />}
+          element={isUserSignIn ? <Filter /> : <Login />}
         />
         <Route
           path="/ai-diet-filter"

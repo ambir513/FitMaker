@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Toaster, toast } from "sonner"
+import axios from 'axios';
 
 
 
 function About() {
 
   const [activeAccordion, setActiveAccordion] = useState('hs-basic-with-title-and-arrow-stretched-heading-one'); // First item open by default
-
+  const subscibe = useRef(null)
   const toggleAccordion = (id) => {
     setActiveAccordion(activeAccordion === id ? null : id);
   };
@@ -38,13 +40,28 @@ function About() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleSubscibe = async () => {
+    const email = subscibe.current.value
+      try {
+        const res = await axios.post("https://fitmakerbackend.vercel.app/subscribe", {email});
+        console.log(res.data.message);
+        toast.success(res.data.message);
+      } catch (error) {
+        console.error(error.response?.data || error.message);
+        toast.error(error.response?.data?.message || "An error occurred");
+      }
+    }
+  
+   
   return (
     <div>
       {/* Hero Section */}
       <div className="relative w-full h-[500px] bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Welcome to Our Gym</h1>
-          <p className="mt-2 text-lg md:text-xl">Achieve your fitness goals with us</p>
+      <Toaster position="top-right" style={{ marginTop: "60px" }} />
+        
+        <div className="absolute inset-0 bg-black/50 bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Elevate Your Fitness Journey</h1>
+          <p className="mt-2 text-lg md:text-xl">Train Hard. Stay Strong. Keep Pushing.</p>
         </div>
       </div>
       
@@ -599,16 +616,16 @@ function About() {
 
    
 
-  <div class="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 py-20 px-6 relative font-[sans-serif]">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-white text-4xl font-extrabold">Subscribe to Our Newsletter</h2>
-        <div class="my-6">
-          <p class="text-base text-gray-200">Subscribe to our newsletter and stay up to date with the latest news, updates, and exclusive offers. Get valuable insights. Join our community today!</p>
+  <div className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 py-20 px-6 relative font-[sans-serif]">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-white text-4xl font-extrabold">Subscribe to Our Newsletter</h2>
+        <div className="my-6">
+          <p className="text-base text-gray-200">Subscribe to our newsletter and stay up to date with the latest news, updates, and exclusive offers. Get valuable insights. Join our community today!</p>
         </div>
 
-        <div class="max-w-2xl left-0 right-0 mx-auto w-full bg-white p-5 flex items-center shadow-lg absolute -bottom-10">
-          <input type="email" placeholder="Enter your email" class="w-full bg-gray-50 py-3.5 px-4 text-gray-800 text-base focus:outline-none" />
-          <button class="bg-[black] hover:bg-[orange] text-white text-base font-semibold tracking-wide py-3.5 px-6 focus:outline-none">
+        <div className="max-w-2xl left-0 right-0 mx-auto w-full bg-white p-5 flex items-center shadow-lg absolute -bottom-10">
+          <input type="email" placeholder="Enter your email" className="w-full bg-gray-50 py-3.5 px-4 text-gray-800 text-base focus:outline-none" ref={subscibe}/>
+          <button className="bg-[black] hover:bg-[orange] cursor-pointer text-white text-base font-semibold tracking-wide py-3.5 px-6 focus:outline-none" onClick={handleSubscibe}>
             Subscribe
           </button>
         </div>

@@ -33,9 +33,9 @@ const services = [
     desc: "Personalized plans to help you lose weight effectively.",
   },
   {
-    title: "Nutrition Plans",
+    title: "Personalized Meal Plans",
     img: "https://images.pexels.com/photos/116079/pexels-photo-116079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Custom meal plans designed for optimal fitness and health.",
+    desc: "Tailored nutrition strategies to support your fitness and wellness goals.",
   },
 
   {
@@ -153,7 +153,7 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 "></div>
         {/* Overlay Container */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4">
+        <div className="absolute inset-0 bg-black/50 bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4">
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -187,6 +187,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
+              onClick={() => window.scrollTo(0, 0)}
               className="mt-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg  uppercase shadow-lg tracking-wide transform transition-transform duration-300 hover:scale-105"
             >
               Start Your Journey
@@ -239,38 +240,40 @@ export default function Home() {
               Our expert trainers, state-of-the-art equipment, and
               science-backed programs ensure you get the best results possible.
             </p>
-            <div class="flex flex-col gap-4 p-4">
-              <div class="flex items-center gap-4">
-                <span class="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
+            <div className="flex flex-col gap-4 p-4">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
                   ✓
                 </span>
-                <p class="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
+                <p className="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
                   Advanced Equipment
                 </p>
               </div>
-              <div class="flex items-center gap-4">
-                <span class="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
                   ✓
                 </span>
-                <p class="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
+                <p className="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
                   Nutrition Guidance
                 </p>
               </div>
-              <div class="flex items-center gap-4">
-                <span class="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500 text-white text-2xl sm:text-xl md:text-2xl font-bold rounded-full shadow-md">
                   ✓
                 </span>
-                <p class="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
+                <p className="text-slate-400 text-lg sm:text-base md:text-lg font-medium">
                   Community Support
                 </p>
               </div>
             </div>
-            <motion.a
-              href="#"
-              className="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg"
+            <Link to="/ai-diet-filter" onClick={() =>  window.scrollTo(0, 0)}>
+            <motion.div
+              className="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 cursor-pointer text-lg font-semibold rounded-lg transition-all duration-300 shadow-lg"
+              
             >
               Join Now
-            </motion.a>
+            </motion.div>
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -302,7 +305,7 @@ export default function Home() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="relative group overflow-hidden shadow-lg cursor-pointer "
+                className="relative group overflow-hidden shadow-lg cursor-pointer rounded-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -311,11 +314,11 @@ export default function Home() {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105 rounded-lg"
                 />
 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/80 flex flex-col justify-center items-center text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
+                <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-white text-center">
                   <h3 className="text-2xl font-bold text-orange-400 mb-2">
                     {service.title}
                   </h3>
@@ -359,7 +362,9 @@ export default function Home() {
             </p>
             <div className="flex justify-center sm:justify-start">
               <Link to="/ai-diet-filter">
-                <button className="mt-4 w-[clamp(8rem,12vw,10rem)] py-[clamp(0.75rem,1.5vw,1rem)] text-[clamp(0.875rem,1.2vw,1.25rem)] font-semibold uppercase bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-xl shadow-xl hover:scale-110 transition-transform duration-300">
+               
+              <button className="mt-4 w-[clamp(8rem,12vw,10rem)] py-[clamp(0.75rem,1.5vw,1rem)] text-[clamp(0.875rem,1.2vw,1.25rem)] font-semibold uppercase bg-gradient-to-r cursor-pointer from-orange-500 to-pink-500 text-white rounded-xl shadow-xl hover:scale-110 transition-transform duration-300"               onClick={() => window.scrollTo(0, 0)}
+              >
                   Get Fit
                 </button>
               </Link>
@@ -429,16 +434,18 @@ export default function Home() {
           {/* View Full Recipe Button */}
           <Link to="/search">
 
-          <button className="mt-6 border-2 border-yellow-500 text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-yellow-500 hover:text-white transition-all shadow-md">
-            View Full Recipe
-            <span>&rarr;</span>
-          </button>
+            <button className="mt-6 border-2 border-yellow-500 text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-yellow-500 hover:text-white transition-all shadow-md"              onClick={() => window.scrollTo(0, 0)}
+            >
+              View Full Recipe
+              <span>&rarr;</span>
+            </button>
           </Link>
         </div>
 
         <div className="lg:w-1/3 flex flex-col gap-6 mt-10 lg:mt-0 lg:ml-10">
           <Link to="/search">
-             <button className="self-start px-8 py-3 border-2 border-yellow-400 text-white font-medium rounded-full hover:bg-yellow-400 hover:text-black transition-all">
+            <button className="self-start px-8 py-3 border-2 border-yellow-400 text-white font-medium rounded-full hover:bg-yellow-400 hover:text-black transition-all"               onClick={() => window.scrollTo(0, 0)}
+            >
               View More Recipes
             </button>
           </Link>
@@ -564,21 +571,21 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="relative overflow-hidden bg-neutral-900 py-4">
-        <div class="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-neutral-900 to-transparent z-10"></div>
+      <div className="relative overflow-hidden bg-neutral-900 py-4">
+        <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-neutral-900 to-transparent z-10"></div>
 
-        <div class="marquee flex space-x-16">
-          <span class="marquee-text">
+        <div className="marquee flex space-x-16">
+          <span className="marquee-text">
             Personal Coach • Online Store • Kids Sports • Martial Arts • Gym
             Website • Personal Training • Sports Equipment
           </span>
-          <span class="marquee-text">
+          <span className="marquee-text">
             Personal Coach • Online Store • Kids Sports • Martial Arts • Gym
             Website • Personal Training • Sports Equipment
           </span>
         </div>
 
-        <div class="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-neutral-900 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-neutral-900 to-transparent z-10"></div>
       </div>
     </>
   );
