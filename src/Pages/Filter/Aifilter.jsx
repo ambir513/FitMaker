@@ -85,7 +85,7 @@ function Aifilter() {
       <div
         className={`${
           display ? "h-screen" : "h-hit"
-        } flex md:p-20 sm:p-10 gap-10 p-3 w-fit justify-center items-center`}
+        } flex md:p-20 sm:p-10 gap-10 p-1 w-fit justify-center items-center`}
       >
         <div className="flex flex-col gap-3">
           <form onSubmit={handlefilter} className="pr-5 pl-2">
@@ -176,7 +176,7 @@ function Aifilter() {
               </button>
             </div>
           </form>
-          <div className="flex justify-center w-fit h-fit mt-10">
+          <div className="flex justify-center w-fit h-fit  mt-10">
             {isChange ? (
               <div className="relative flex w-full animate-pulse gap-2 ">
                 <div className="md:h-[380px] sm:h-[200px] h-[300px] lg:w-[800px] md:w-[700px] sm:w-[500px] w-[300px] rounded-lg bg-slate-400"></div>

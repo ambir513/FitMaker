@@ -45,6 +45,11 @@ export default function Navbar() {
     window.scrollTo(0, 0);
   }
 
+
+  function handleaccount() {
+    setMenuOpen(false)
+    window.scrollTo(0, 0);
+  }
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 px-6 py-3 flex items-center justify-between transition-all duration-300 bg-white shadow-lg border-none`} >
       {/* Logo */}
@@ -77,7 +82,7 @@ export default function Navbar() {
         {
           isUserSignIn ?
             (<>
-              <Link to="/account" className=" bg-red-600 text-white hover:bg-red-700 py-2 rounded-lg px-3">
+              <Link to="/account" className=" bg-red-600 text-white hover:bg-red-700 py-2 rounded-lg px-3" onClick={() => window.scrollTo(0, 0)}>
                 <div className="flex justify-center items-center gap-3">
                   <img src={`https://avatar.iran.liara.run/public/boy`} alt="avatar" width={25} />
                   <div className="flex flex-col justify-center items-center">
@@ -135,12 +140,12 @@ export default function Navbar() {
         {
           isUserSignIn ? (
             <>
-              <Link to="/account">
-                <h1 className="flex justify-center items-center gap-3 text-black">
+              <Link to="/account" className=" bg-[#F44336] w-full text-white hover:bg-red-700 py-2.5 rounded-lg px-3" onClick={handleaccount}>
+                <h1 className="flex justify-center items-center gap-3 text-white">
                   <img src={`https://avatar.iran.liara.run/public/boy`} alt="avatar" width={25} />
                   {user?.username}</h1>
               </Link>
-              <button onClick={handleSignOut}>Logout</button>
+              <button onClick={handleSignOut}  className="  text-[#F44336] border-2 cursor-pointer w-full py-1.5 rounded-lg px-3">Logout</button>
             </>
           ) : (
             <>
