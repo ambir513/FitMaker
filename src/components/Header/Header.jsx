@@ -33,11 +33,16 @@ export default function Navbar() {
     }
   }, [])
 
+  function handleMenu() {
+    setMenuOpen(false)
+     window.scrollTo(0, 0)
+  }
 
   const handleSignOut = () => {
     localStorage.removeItem("token")
     navigate("/login")
     setMenuOpen(false)
+    window.scrollTo(0, 0);
   }
 
   return (
@@ -51,15 +56,20 @@ export default function Navbar() {
             <p className={`text-sm text-gray-600 `}>Transform Your Body</p>
           </div>
         </div>
-      </Link>
+      </Link> 
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 text-lg font-medium text-black">
-        <li><Link to="/" className="hover:text-red-500 transition duration-300">Home</Link></li>
-        <li><Link to="/about" className="hover:text-red-500 transition duration-300">About Us</Link></li>
-        <li><Link to="/shop" className="hover:text-red-500 transition duration-300">Shop</Link></li>
-        <li><Link to="/contact" className="hover:text-red-500 transition duration-300">Contact</Link></li>
-        <li><Link to="/search" className="hover:text-red-500 transition duration-300">Search</Link></li>
+        <Link to="/" className="hover:text-red-500 transition duration-300"><li onClick={() =>     window.scrollTo(0, 0)
+}>Home</li></Link>
+        <Link to="/about" className="hover:text-red-500 transition duration-300"><li onClick={() =>     window.scrollTo(0, 0)
+}>About Us</li></Link>
+        <Link to="/shop" className="hover:text-red-500 transition duration-300"><li onClick={() =>     window.scrollTo(0, 0)
+}>Shop</li></Link>
+        <Link to="/contact" className="hover:text-red-500 transition duration-300"><li onClick={() =>     window.scrollTo(0, 0)
+}>Contact</li></Link>
+        <Link to="/search" className="hover:text-red-500 transition duration-300"><li onClick={() =>     window.scrollTo(0, 0)
+}>Search</li></Link>
       </ul>
 
       {/* Desktop Buttons */}
@@ -82,13 +92,15 @@ export default function Navbar() {
               <>
                 <Link to="/login">
                   <button className="border-2 px-5 py-2 rounded-lg transition duration-300
-           border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
+           border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer" onClick={() =>     window.scrollTo(0, 0)
+}>
                     Login
                   </button>
                 </Link>
                 <Link to="/signup">
                   <button className="px-5 py-2 rounded-lg transition duration-300 
-          bg-red-600 text-white hover:bg-red-700">
+          bg-red-600 text-white hover:bg-red-700 cursor-pointer"  onClick={() =>  window.scrollTo(0, 0)
+}>
                     Sign Up
                   </button>
                 </Link>
@@ -101,7 +113,7 @@ export default function Navbar() {
         className="md:hidden text-3xl z-50 text-black"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        {menuOpen ? <FiX /> : <FiMenu />}
+        {menuOpen ? <FiX className="cursor-pointer"/> : <FiMenu className="cursor-pointer"/>}
       </button>
 
       {/* Backdrop */}
@@ -115,11 +127,11 @@ export default function Navbar() {
         className="fixed top-0 left-0 h-screen w-64 bg-white shadow-2xl flex flex-col items-start gap-6 py-8 px-6 z-50 "
       >
         <h2 className="text-xl font-bold text-red-600">Menu</h2>
-        <Link to="/" className="text-lg text-gray-800  font-bold hover:text-red-500 transition duration-300"><h1 onClick={() => setMenuOpen(false)}>Home</h1></Link>
-        <Link to="/about" className="text-lg text-gray-800 font-bold hover:text-red-500 transition duration-300"><h1 onClick={() => setMenuOpen(false)}>About us</h1></Link>
-        <Link to="/shop" className="text-lg text-gray-800 font-bold hover:text-red-500 transition duration-300"><h1 onClick={() => setMenuOpen(false)}>Shop</h1></Link>
-        <Link to="/contact" className="text-lg text-gray-800 font-bold hover:text-red-500 transition duration-300"><h1 onClick={() => setMenuOpen(false)}>Contact</h1></Link>
-        <Link to="/search" className="text-lg text-gray-800  font-bold hover:text-red-500 transition duration-300"><h1 onClick={() => setMenuOpen(false)}>Search</h1></Link>
+        <Link to="/" className="text-lg text-gray-800  font-bold hover:text-red-500 transition duration-300"><h1 onClick={handleMenu}>Home</h1></Link>
+        <Link to="/about" className="text-lg text-gray-800 font-bold hover:text-red-500 transition duration-300"><h1 onClick={handleMenu}>About us</h1></Link>
+        <Link to="/shop" className="text-lg text-gray-800 font-bold hover:text-red-500 transition duration-300"><h1 onClick={ handleMenu}>Shop</h1></Link>
+        <Link to="/contact" className="text-lg text-gray-800 font-bold hover:text-red-500 transition duration-300"><h1 onClick={ handleMenu}>Contact</h1></Link>
+        <Link to="/search" className="text-lg text-gray-800  font-bold hover:text-red-500 transition duration-300"><h1 onClick={ handleMenu}>Search</h1></Link>
         {
           isUserSignIn ? (
             <>
@@ -135,7 +147,7 @@ export default function Navbar() {
               <Link to="/login">
                 <button
                   className="w-full border-2 border-orange-500 text-orange-500 px-5 py-2 rounded-full hover:bg-orange-500 hover:text-white transition duration-300"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={handleMenu}
                 >
                   Login
                 </button>
@@ -143,7 +155,7 @@ export default function Navbar() {
               <Link to="/signup">
                 <button
                   className="w-full bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition duration-300"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={handleMenu}
                 >
                   Sign Up
                 </button>

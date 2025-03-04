@@ -19,7 +19,7 @@ export default function Contact() {
             "url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4">
+        <div className="absolute inset-0 bg-black/50 bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Welcome to Our Gym</h1>
           <p className="mt-2 text-base sm:text-lg md:text-xl">Achieve your fitness goals with us</p>
         </div>
