@@ -227,12 +227,14 @@ const Cart = () => {
                 <Link
                   to="/Shop"
                   className="px-4 py-3 w-[45%] border border-gray-300 bg-white hover:bg-gray-50 text-gray-800 text-sm font-semibold no-underline text-center"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Back to Shop
                 </Link>
                 <Link
                   to={`/Purchase/${profileId}`}
                   className="px-4 py-3 w-[45%] border border-purple-600 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold no-underline text-center"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Buy it now
                 </Link>
