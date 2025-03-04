@@ -25,7 +25,7 @@ npm start
 [GitHub - FitMaker Backend](https://github.com/ambir513/fitmakerbackend)
 
 ## 🌍 Deployment
-The backend is deployed on Vercel: [FitMaker Backend](https://fitmaker-delta.vercel.app/)
+The Frontend is deployed on Vercel: [FitMaker](https://fitmakerr.vercel.app/)
 
 ## 🌟 Contributing
 Feel free to contribute by submitting issues or pull requests. Any improvements are welcome!
