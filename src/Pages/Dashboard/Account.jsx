@@ -41,13 +41,15 @@ function Account() {
                 </div>
             </div>
             {user?.diet?.Breakfast ? (
-    <div className="response-container sm:p-10 w-[600px] sm:m-10 p-5 m-5 md:p-20 md:m-20 rounded-lg bg-blue-50">
+    <div className="flex justify-center items-center w-full">
+        <div className="sm:p-10 w-[350px] sm:w-[900px] flex flex-col justify-center gap-[10px]  p-5 m-5 md:p-16 border-2 border-[#007bff] rounded-lg bg-gradient-to-r from-[#f8f9fa] to-[#e3f2fd]">
         <strong className='flex justify-center items-center text-lg mb-5'>Diet</strong>
         <p><strong>Breakfast:</strong> {user?.diet?.Breakfast}</p>
         <p><strong>Lunch:</strong> {user?.diet?.Lunch}</p>
         <p><strong>Snacks:</strong> {user?.diet?.Snacks}</p>
         <p><strong>Dinner:</strong> {user?.diet?.Dinner}</p>
         <p><strong>Hydration:</strong> {user?.diet?.Hydration}</p>
+    </div>
     </div>
 ) : null}
 
