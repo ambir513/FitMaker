@@ -49,6 +49,7 @@ function Shop() {
       <a
         href="/shop"
         className="relative mt-6 inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-yellow-400 text-white text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+        onClick={() => window.scrollTo(0, 0)}
       >
         Shop Now
       </a>
@@ -90,6 +91,7 @@ function Shop() {
                     to={`/Card/${product.id}`} // Changed to Cart for consistency
                     className="bg-transparent outline-none border-none no-underline text-inherit"
                     title="Add to cart"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +176,8 @@ function Shop() {
                     <Link
                       to={`/Cart/${sneaker.id}`} // Fixed to use sneaker.id
                       className="text-sm py-2 px-6 font-semibold w-full bg-blue-600 hover:bg-blue-700 text-white tracking-wide outline-none border-none rounded text-center no-underline"
-                    >
+                      onClick={() => window.scrollTo(0, 0)}
+                   >
                       Add to cart
                     </Link>
                   </div>

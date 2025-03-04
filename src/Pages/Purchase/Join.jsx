@@ -220,7 +220,8 @@ const Join = () => {
             <Link to="/shop"
                 type="button"
                 className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200"
-              >
+                onClick={() => window.scrollTo(0, 0)}
+            >
                 Back
               </Link>
               
@@ -228,7 +229,8 @@ const Join = () => {
               <Link to={`upi://pay?pa=amarbiradar147@oksbi&pn=Amar%20Biradar&am=${product.total}` }
                 type="submit"
                 className="min-w-[150px]         px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
-              >
+                onClick={() => window.scrollTo(0, 0)}
+             >
                 Pay {product.total}
               </Link>
               

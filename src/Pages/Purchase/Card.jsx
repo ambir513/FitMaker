@@ -414,14 +414,16 @@ const Card = () => {
                   <Link
                     to={`/Join/${profileId}`}
                     className="px-4 py-3 w-full border border-gray-800 bg-gray-800 hover:bg-transparent hover:text-gray-800 text-white text-sm font-semibold transition-all duration-300 no-underline text-center"
-                  >
+                    onClick={() => window.scrollTo(0, 0)}
+                 >
                     add to cart
                   </Link>
                 </div>
                 <button
                   type="button"
                   className="mt-4 px-4 py-3 w-full border border-purple-600 bg-purple-600 hover:bg-gray-800 text-white text-sm font-semibold transition-all duration-300"
-                >
+                  onClick={() => window.scrollTo(0, 0)}
+               >
                   Reserve Spot
                 </button>
               </div>
@@ -448,6 +450,7 @@ const Card = () => {
             <button
               onClick={() => setActiveTab('membership')}
               className={`px-4 py-3 text-[13px] sm:text-sm font-semibold ${activeTab === 'membership' ? 'border-b border-gray-800 text-gray-800' : 'border-b border-transparent text-gray-500'}`}
+            
             >
               MEMBERSHIP DETAILS
             </button>
