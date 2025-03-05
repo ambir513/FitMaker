@@ -32,7 +32,11 @@ function Verification() {
         }
     }, [])
     return (
+
  <div className="flex flex-col justify-center items-center h-screen space-y-4">
+
+        <div className="flex flex-col justify-center items-center h-screen space-y-4">
+
         <Toaster position="top-right" />
         <h2 className="text-2xl font-semibold">Email Verification</h2>
         <p className="text-gray-600">{message}</p>
