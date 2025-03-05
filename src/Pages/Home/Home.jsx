@@ -49,19 +49,19 @@ const blogs = [
   {
     image:
       "https://images.pexels.com/photos/868483/pexels-photo-868483.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "April 19, 2025",
+    date: "Jan 19, 2025",
     title: "Fitness helps you think and feel better",
   },
   {
     image:
       "https://images.pexels.com/photos/2662878/pexels-photo-2662878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    date: "April 21, 2025",
+    date: "Fab 21, 2025",
     title: "How to Prepare Meals Fast and Easy",
   },
   {
     image:
       "https://images.pexels.com/photos/6455834/pexels-photo-6455834.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    date: "April 25, 2025",
+    date: "March 04, 2025",
     title: "Today is the Best Day to Start Training",
   },
 ];
@@ -502,7 +502,7 @@ export default function Home() {
                 alt={blog.title}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all"></div>
+              <div className="absolute inset-0 bg-black/60 bg-opacity-40 group-hover:bg-opacity-50 transition-all"></div>
               <div className="absolute bottom-4 left-4 text-white">
                 <span className="bg-orange-600 text-xs px-3 py-1 rounded-full">
                   {blog.date}
