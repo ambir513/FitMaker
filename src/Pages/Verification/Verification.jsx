@@ -2,6 +2,7 @@ import React from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import { Toaster, toast } from "sonner"
 
 function Verification() {
@@ -34,12 +35,10 @@ function Verification() {
     return (
 
  <div className="flex flex-col justify-center items-center h-screen space-y-4">
-
-        <div className="flex flex-col justify-center items-center h-screen space-y-4">
-
         <Toaster position="top-right" />
         <h2 className="text-2xl font-semibold">Email Verification</h2>
         <p className="text-gray-600">{message}</p>
+      <Link to="/login" className="bg-blue-500 w-fit py-1.5 px-4 mt-8 cursor-pointer text-white rounded-lg">Login now</Link>
     </div>
     )
 }
