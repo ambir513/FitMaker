@@ -398,7 +398,7 @@ export default function Home() {
               {/* Embedded Video */}
               <iframe
                 className="w-full h-[clamp(250px,50vw,450px)] rounded-xl"
-                src="https://youtu.be/eaRQF-7hhmo?si=ahxzi2vTQBvJOXF0"
+                src="https://www.youtube.com/embed/eaRQF-7hhmo?si=ahxzi2vTQBvJOXF0"
                 title="Hero Video"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
