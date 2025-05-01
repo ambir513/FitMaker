@@ -12,7 +12,6 @@ function Signup() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const navigate = useNavigate()
     const [typechanger, setTypeChanger] = useState("")
     const [isChange, setIsChange] = useState(false)
     
