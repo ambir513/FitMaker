@@ -39,9 +39,10 @@ function Signup() {
                     setPassword("")
 
                     if (res.data.status === "SUCCESS") {
-                        navigate("/login")
+                       
                         setIsChange(false)
                         toast.success(res.data.message)
+                         navigate("/login")
                     } else {
                         toast.error(res.data.message)
                         setIsChange(false)
