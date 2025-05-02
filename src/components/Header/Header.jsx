@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { Toaster, toast } from "sonner"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,6 +53,7 @@ export default function Navbar() {
   }
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 px-6 py-3 flex items-center justify-between transition-all duration-300 bg-white shadow-lg border-none`} >
+      <Toaster position="top-right" style={{ marginTop: "60px" }} />
       {/* Logo */}
       <Link to="/">
         <div className="flex items-center gap-3" >
