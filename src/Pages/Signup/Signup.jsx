@@ -40,12 +40,8 @@ function Signup() {
 
                     if (res.data.status === "SUCCESS") {
                         setIsChange(false)
-                        toast.success(res.data.message, {
-                            action: {
-                                label: 'Link',
-                                onClick: () => window.location.href = 'https://mail.google.com/mail/u/0/#inbox',
-                            }
-                        })
+                        toast.success(res.data.message)
+                        navigate("/login")
                     } else {
                         toast.error(res.data.message)
                         setIsChange(false)
