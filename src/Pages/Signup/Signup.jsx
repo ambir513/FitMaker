@@ -39,9 +39,12 @@ function Signup() {
                     setPassword("")
 
                     if (res.data.status === "SUCCESS") {
+                       
                         setIsChange(false)
                         toast.success(res.data.message)
-                        navigate("/login")
+
+                  
+                         navigate("/login")
                     } else {
                         toast.error(res.data.message)
                         setIsChange(false)
@@ -55,7 +58,7 @@ function Signup() {
 
     return (
         <div className="flex flex-col justify-center items-center h-dvh text-black w-full ">
-            <Toaster position="top-right" style={{ marginTop: "60px" }} />
+            
             <img src="/assets/FitMaker.png" alt="" width={55} className="rounded-lg" />
             <form onSubmit={handleRegister}>
                 <div className=" relative flex flex-col justify-center  w-fit p-4   bg-white rounded-lg h-fit px-7">
