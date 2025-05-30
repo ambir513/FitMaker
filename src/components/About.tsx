@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import AnimateText from "./AnimateText";
 import { TbMessageCircleQuestion } from "react-icons/tb";
