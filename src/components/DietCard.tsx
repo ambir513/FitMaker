@@ -1,5 +1,5 @@
 "use <client></client>";
-import { Card, CardHeader } from "./ui/card";
+import { Card } from "./ui/card";
 import Image from "next/image";
 
 export default function DietCard() {
