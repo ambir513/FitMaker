@@ -1,8 +1,7 @@
-import { CalendarIcon } from "lucide-react";
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   HoverCard,

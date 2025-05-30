@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import AnimateText from "./AnimateText";
 import { TbMessageCircleQuestion } from "react-icons/tb";
@@ -49,11 +50,11 @@ export default function About() {
           </div>
           <div className="lg:w-[320px] sm:w-[300px] w-[300px] flex flex-col justify-center  gap-4 px-3">
             <div className="">
-              <span className=" text-zinc-500">
-                "Fitness isn’t just part of my routine - it’s the foundation of
-                everything I do. It fuels my discipline, sharpens my focus, and
-                keeps me one step ahead. This isn’t a phase; it’s a lifelong
-                commitment."
+              <span className="text-zinc-500">
+                &quot;Fitness isn’t just part of my routine - it’s the
+                foundation of everything I do. It fuels my discipline, sharpens
+                my focus, and keeps me one step ahead. This isn’t a phase; it’s
+                a lifelong commitment.&quot;
               </span>
             </div>
             <div className="">
