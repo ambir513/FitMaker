@@ -1,6 +1,5 @@
 "use client";
 import { Card, CardFooter } from "@/components/ui/card";
-import ShimmerUI from "./ShimmerUI";
 import PaginationPage from "@/components/PaginationPage";
 import DietCard from "./DietCard";
 
