@@ -1,4 +1,6 @@
+
 "use client"
+
 import React from "react";
 import { HomeCard } from "./HomeCard";
 import AnimateText from "./AnimateText";
