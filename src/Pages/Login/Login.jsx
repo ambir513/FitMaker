@@ -52,7 +52,10 @@ function Login() {
                     localStorage.setItem("token", token);
                 }
             } catch (error) {
-                console.log("Login error");
+              catch (error) {
+  console.log("Login error:", error.response?.data || error.message);
+  toast.error(error.response?.data?.message || "Login failed");
+}
             }
 
         }
